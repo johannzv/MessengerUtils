@@ -2,10 +2,10 @@ package models
 
 // Message holds message
 type Message struct {
-	Mid         string       `json:"mid"`
+	Mid         string       `json:"mid,omitempty"`
 	Text        string       `json:"text"`
 	Attachments []Attachment `json:"attachments,omitempty"`
-	QuickReplay QuickReplay  `json:"quick_reply, omitempty"`
+	QuickReplay QuickReplay  `json:"quick_reply,omitempty"`
 }
 
 // Attachment struct holding attachments
@@ -16,8 +16,9 @@ type Attachment struct {
 
 // Payload may be multimedia or a location
 type Payload struct {
-	URL      string   `json:"url,omitempty"`
-	Location Location `json:"location,omitempty"`
+	URL          string   `json:"url,omitempty"`
+	Location     Location `json:"location,omitempty"`
+	TemplateType string   `json:"template_type,omitempty"`
 }
 
 // TODO test this

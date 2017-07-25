@@ -11,6 +11,8 @@ Contains mapping between received messages and structs in Go. Can be de/encoded 
 * Attachment : location, multimedia
 * QuickReplay
 
+### Send
+Functions for sending templates and buttons 
 
 
 ## In the Future
