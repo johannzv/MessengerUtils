@@ -31,5 +31,8 @@ type Location struct {
 
 //QuickReplay :text provided via QuickReplay
 type QuickReplay struct {
-	Payload string `json:"payload"`
+	Payload     string `json:"payload,omitempty"`
+	ContentType string `json:"content_type,omitempty"`
+	ImageURL    string `json:"image_url,omitempty"`
+	Title       string `json:"title,omitempty"`
 }
