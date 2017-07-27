@@ -2,10 +2,10 @@ package models
 
 // Message holds message
 type Message struct {
-	Mid         string       `json:"mid,omitempty"`
-	Text        string       `json:"text"`
-	Attachments []Attachment `json:"attachments,omitempty"`
-	QuickReplay QuickReplay  `json:"quick_reply,omitempty"`
+	Mid         string        `json:"mid,omitempty"`
+	Text        string        `json:"text"`
+	Attachments []Attachment  `json:"attachments,omitempty"`
+	QuickReplay []QuickReplay `json:"quick_reply,omitempty"`
 }
 
 // Attachment struct holding attachments
