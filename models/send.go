@@ -8,11 +8,11 @@ import (
 
 //MessageModel for sending a message
 type MessageModel interface {
-	send(token string) (*http.Response, error)
+	Send(token string) (*http.Response, error)
 }
 
-// sends the message to a page given a valid token
-func (msg MessageSend) send(token string) (*http.Response, error) {
+// Send the message to a page given a valid token
+func (msg MessageSend) Send(token string) (*http.Response, error) {
 	body := new(bytes.Buffer)
 	err := json.NewEncoder(body).Encode(msg)
 	if err != nil {

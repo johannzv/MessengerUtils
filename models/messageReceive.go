@@ -2,10 +2,9 @@ package models
 
 // Message holds message
 type Message struct {
-	Mid         string        `json:"mid,omitempty"`
-	Text        string        `json:"text"`
-	Attachments []Attachment  `json:"attachments,omitempty"`
-	QuickReplay []QuickReplay `json:"quick_reply,omitempty"`
+	Mid         string      `json:"mid,omitempty"`
+	Text        string      `json:"text"`
+	QuickReplay QuickReplay `json:"quick_reply,omitempty"`
 }
 
 // Attachment struct holding attachments
@@ -16,12 +15,28 @@ type Attachment struct {
 
 // Payload may be multimedia or a location
 type Payload struct {
-	URL          string   `json:"url,omitempty"`
-	Location     Location `json:"location,omitempty"`
-	TemplateType string   `json:"template_type,omitempty"`
+	URL             string    `json:"url,omitempty"`
+	Location        Location  `json:"location,omitempty"`
+	TemplateType    string    `json:"template_type,omitempty"`
+	Sharable        string    `json:"sharable,omitempty"`
+	TopElementStyle string    `json:"top_element_style,omitempty"`
+	Elements        []Element `json:"elements,omitempty"`
+	Buttons         []Button  `json:"buttons,omitempty"`
 }
 
-// TODO test this
+//Button dfpsd
+type Button struct {
+	Title   string `json:"title,omitempty"`
+	Type    string `json:"type,omitempty"`
+	Payload string `json:"payload,omitempty"`
+}
+
+//Element of lsit
+type Element struct {
+	Title    string `json:"title,omitempty"`
+	Subtitle string `json:"subtitle,omitempty"`
+	ImageURL string `json:"image_url,omitempty"`
+}
 
 // Location cordinates
 type Location struct {
