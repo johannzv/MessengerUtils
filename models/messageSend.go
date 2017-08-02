@@ -10,5 +10,6 @@ type MessageSend struct {
 //MessageSendingType sendingMessage
 type MessageSendingType struct {
 	Text         string        `json:"text"`
+	Attachment   Attachment    `json:"attachment,omitempty"`
 	QuickReplies []QuickReplay `json:"quick_replies,omitempty"`
 }

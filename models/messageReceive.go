@@ -33,9 +33,10 @@ type Button struct {
 
 //Element of lsit
 type Element struct {
-	Title    string `json:"title,omitempty"`
-	Subtitle string `json:"subtitle,omitempty"`
-	ImageURL string `json:"image_url,omitempty"`
+	Title    string   `json:"title,omitempty"`
+	Subtitle string   `json:"subtitle,omitempty"`
+	ImageURL string   `json:"image_url,omitempty"`
+	Buttons  []Button `json:"buttons,omitempty"`
 }
 
 // Location cordinates
