@@ -15,6 +15,9 @@ type User struct {
 
 //UserMinimal : minimal amount of userdate to be stored on a user
 type UserMinimal struct {
-	PSID    string    `json:"PSID"`
-	Created time.Time `json:"created,omitempty"`
+	PSID      string    `json:"PSID"`
+	FirstName string    `json:"first_name,omitempty"`
+	LastName  string    `json:"last_name,omitempty"`
+	Locale    string    `json:"locale,omitempty"`
+	Created   time.Time `json:"created,omitempty"`
 }
