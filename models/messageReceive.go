@@ -16,7 +16,7 @@ type Attachment struct {
 // Payload may be multimedia or a location
 type Payload struct {
 	URL             string    `json:"url,omitempty"`
-	Location        Location  `json:"location,omitempty"`
+	Location        *Location `json:"location,omitempty"`
 	TemplateType    string    `json:"template_type,omitempty"`
 	Sharable        string    `json:"sharable,omitempty"`
 	TopElementStyle string    `json:"top_element_style,omitempty"`
