@@ -9,8 +9,8 @@ type Message struct {
 
 // Attachment struct holding attachments
 type Attachment struct {
-	Type    string  `json:"type"`
-	Payload Payload `json:"payload"`
+	Type    string  `json:"type,omitempty"`
+	Payload Payload `json:"payload,omitempty"`
 }
 
 // Payload may be multimedia or a location
